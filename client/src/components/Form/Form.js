@@ -55,10 +55,10 @@ const Form = () => {
   const onSubmit = (event) => {
       event.preventDefault();
       
-        if ((valueA === moodQuestions.Hopeless && valueB === moodChangeQuestions.Transformation) ||
-      (valueA === moodQuestions.Melancholy && valueB === moodChangeQuestions.Transformation)) {
+        if ((valueA === moodQuestions.Joyous && valueB === moodChangeQuestions.Transformation) ||
+      (valueA === moodQuestions.Melancholy && valueB === moodChangeQuestions.Affirmation)) {
         getPoem('6269f94c02336003aef3d018');
-      } else if (valueA === moodQuestions.Content && valueB === moodChangeQuestions.Transformation) {
+      } else if (valueA === moodQuestions.Content && valueB === moodChangeQuestions.Affirmation) {
         getPoem('61f898143838e139becc6619');
       } else if ((valueA === moodQuestions.Inspired && valueB === moodChangeQuestions.Affirmation) || 
       (valueA === moodQuestions.Hopeless && valueB === moodChangeQuestions.Transformation)) {
