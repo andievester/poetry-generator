@@ -1,12 +1,8 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Container, AppBar, Typography, Grow, Grid } from '@material-ui/core';
-import { useDispatch  } from 'react-redux';
-
-import { getPoems } from './actions/poems'
 
 import Form from './components/Form/Form'
 import Poems from './components/Poems/Poems'
-import Poem from './components/Poems/Poem/Poem'
 import useStyles from './styles';
 
 const App = () => {
