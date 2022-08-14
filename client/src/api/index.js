@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const url = 'http://localhost:3000/poem';
+const url = 'https://poetry-app-server.herokuapp.com/poem';
 
 export const fetchPoems = () => axios.get(url);
 
