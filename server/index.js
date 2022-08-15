@@ -15,10 +15,6 @@ app.use(cors());
 
 app.use('/poem', poemRoutes);
 
-app.get('/', (req, res) => {
-    res.send('APP IS RUNNING.');
-})
-
 const PORT = process.env.PORT; 
 
 mongoose.connect(process.env.CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true})
