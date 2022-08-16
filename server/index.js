@@ -29,6 +29,5 @@ app.listen(PORT, () => {
     //.then(() => app.listen(PORT, () => console.log(`Server running on port: ${PORT}`)))
     //.catch((error) => console.log(error.message));
 
-    mongoose.connect("mongodb+srv://avester:FishSlippers3@poetryapp.07f1d.mongodb.net/?retryWrites=true&w=majority", { useNewUrlParser: true, useUnifiedTopology: true})
-    .then(() => app.listen(PORT, () => console.log(`Server running on port: ${PORT}`)))
-    .catch((error) => console.log(error.message));
+    mongoose.connect("mongodb+srv://avester:FishSlippers3@poetryapp.07f1d.mongodb.net/poetryapp?retryWrites=true&w=majority", { useNewUrlParser: true, useUnifiedTopology: true})
+    
