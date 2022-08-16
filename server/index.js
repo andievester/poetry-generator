@@ -21,6 +21,14 @@ app.use('/poem', poemRoutes);
 
 const PORT = process.env.PORT; 
 
-mongoose.connect(process.env.CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true})
+app.listen(PORT, () => {
+   console.log("connected");
+});
+
+//mongoose.connect(process.env.CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true})
+    //.then(() => app.listen(PORT, () => console.log(`Server running on port: ${PORT}`)))
+    //.catch((error) => console.log(error.message));
+
+    mongoose.connect("mongodb+srv://avester:FishSlippers3@poetryapp.07f1d.mongodb.net/?retryWrites=true&w=majority", { useNewUrlParser: true, useUnifiedTopology: true})
     .then(() => app.listen(PORT, () => console.log(`Server running on port: ${PORT}`)))
     .catch((error) => console.log(error.message));
