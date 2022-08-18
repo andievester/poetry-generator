@@ -13,28 +13,12 @@ app.use(bodyParser.json({ extended: true }))
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 
-app.use('/poem', poemRoutes);
+//app.use('/poem', poemRoutes);
 
-//app.get('/', (req, res) => {
-   // res.send('APP IS RUNNING.');
-//})
+const PORT = process.env.PORT;  
 
-const PORT = process.env.PORT || 5000; 
+mongoose.connect(process.env.CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true})
+    .then(() => app.listen(PORT, () => console.log(`Server running on port: ${PORT}`)))
+    .catch((error) => console.log(error.message));
 
-app.listen(PORT, () => {
-   console.log("connected");
-}); 
-
-mongoose.connect(process.env.MONGO_URL, {
-   useNewUrlParser: true, useUnifiedTopology: true
-})
-.then(console.log("Connected"))
-.catch((err) => console.log(err));
-
-
-//mongoose.connect(process.env.CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true})
-    //.then(() => app.listen(PORT, () => console.log(`Server running on port: ${PORT}`)))
-    //.catch((error) => console.log(error.message));
-
-//mongoose.connect("mongodb+srv://avester:FishSlippers3@poetryapp.07f1d.mongodb.net/?retryWrites=true&w=majority", { useNewUrlParser: true, useUnifiedTopology: true})
     

@@ -6,10 +6,10 @@ import { getPoem } from '../controllers/poems.js'
 
 const router = express.Router();
 
-router.get('/', getPoems);
+r//outer.get('/', getPoems);
 
-router.get('/:id', getPoem);
+//router.get('/:id', getPoem);
 
-router.post('/', createPoem);
+//router.post('/', createPoem);
 
 export default router;
