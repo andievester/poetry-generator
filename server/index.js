@@ -13,7 +13,7 @@ app.use(bodyParser.json({ extended: true }))
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 
-//app.use('/poem', poemRoutes);
+app.use('/poem', poemRoutes);
 
 const PORT = process.env.PORT;  
 
