@@ -1,7 +1,5 @@
 # poetry-generator
 
-Follow the link to check out the fully deployed app: 
-https://delicate-churros-76260a.netlify.app/
 
 Have you ever felt down, and had the urge to listen to sad music to affirm your emotions and help you feel less alone in them? 
 Or maybe you turned to something upbeat and happy, in order to turn your day around?
