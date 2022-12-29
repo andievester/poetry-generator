@@ -1,25 +1,25 @@
+import React from "react";
+import { Grid, CircularProgress } from "@material-ui/core";
+import { useSelector } from "react-redux";
 
-   
-import React from 'react';
-import { Grid } from '@material-ui/core';
-import { useSelector } from 'react-redux';
-
-import Poem from '../Poems/Poem/Poem'
+import Poem from "../Poems/Poem/Poem";
 
 const Poems = ({ setCurrentId }) => {
-  const poem = useSelector((state) => state.poems);
+  const poem = useSelector((state) => state.poems);;
 
-  if (poem.title !== '' ) {
+  if (poem.title === "" && !poem.isLoading) {
+    return null;
+  } else if (poem.title === "" && poem.isLoading) {
+    return <CircularProgress />
+  } else if (poem.title !== "") {
     return (
       <Grid container>
-          <Grid key={poem._id} >
-            <Poem poem={poem} setCurrentId={setCurrentId} />
-          </Grid>
+        <Grid key={poem._id}>
+          <Poem poem={poem} setCurrentId={setCurrentId} />
+        </Grid>
       </Grid>
-    
-  );
-  } else return null;
-  
+    );
+  }
 };
 
 export default Poems;

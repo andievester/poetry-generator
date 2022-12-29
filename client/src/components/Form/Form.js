@@ -3,6 +3,7 @@ import { Button, Typography, Paper } from "@material-ui/core";
 
 import { useDispatch } from "react-redux";
 import { getSinglePoem } from "../../actions/poems";
+import { setLoader } from "../../actions/poems";
 
 import useStyles from "./styles";
 
@@ -132,6 +133,7 @@ const Form = () => {
 
   function getPoem(id) {
     dispatch(getSinglePoem(id));
+    dispatch(setLoader(true));
   }
 
   return (

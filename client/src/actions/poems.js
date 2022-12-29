@@ -19,3 +19,10 @@ export const getSinglePoem = (id) => async (dispatch) => {
         console.log(error.message);
     }
 }
+
+export const setLoader = (loading) => {
+    return {
+        type : 'LOADER',
+        payload : loading
+    }
+}
