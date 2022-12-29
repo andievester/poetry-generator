@@ -1,9 +1,9 @@
 import { makeStyles } from '@material-ui/core/styles';
 
 export default makeStyles({
-  cardContent: {
+  cardHeader: {
     height: '150px',
-    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+    backgroundColor: '#ee4b2b',
     backgroundBlendMode: 'darken',
   },
   card: {
@@ -12,6 +12,7 @@ export default makeStyles({
     borderRadius: '15px',
     height: '100%',
     position: 'relative',
+    backgroundColor: '#fdedea',
   },
   poemTitle: {
     position: 'absolute',
@@ -32,6 +33,14 @@ export default makeStyles({
     display: 'flex',
     whiteSpace: 'pre-wrap',
     margin: '20px',
-    padding: '0 30px 0 5px'
+    padding: '0 30px 0 5px',
+    color: 'black'
+  },
+  font: {
+    fontFamily: 'Verdana',
+    color: 'black'
+  },
+  titleFont: {
+    fontFamily: 'Verdana'
   },
 });

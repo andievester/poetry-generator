@@ -10,13 +10,17 @@ export default makeStyles(() => ({
         alignItems: 'center',
       },
       heading: {
-        color: 'rgba(0,183,255, 1)',
+        color: 'transparent',
+        backgroundImage: 'linear-gradient(to right, #553c9a 45%, #ee4b2b)',
+        backgroundClip: 'text',
+        WebkitBackgroundClip: 'text',
+        fontFamily: 'Verdana',
+        paddingBottom: '0.25rem',
       },
       container: {
-        padding: '0'
+        padding: '0',
       },
       poem: {
         width: '100%',
-        margin: '10px 0'
-      }
+      },
 }));
